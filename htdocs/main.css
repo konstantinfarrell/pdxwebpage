@@ -1,0 +1,25 @@
+body {
+    height: 100%;
+    overflow-Y: hidden;
+}
+
+#code {
+    width: 550px;
+    margin: 0 auto;
+}
+
+#main-container {
+    height: 100%;
+}
+
+#origin {
+    margin: 5 0 0 5;
+    position: absolute;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+#thing {
+    margin: 0 auto;
+    position: relative;
+}
