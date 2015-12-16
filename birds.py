@@ -1,10 +1,10 @@
 import random
 from PIL import Image, ImageDraw, ImageFilter
 
-NUMICONS = 1000000
+NUMICONS = 5000
 
-ICON_PATH = r"C:\Users\Konstantin\Documents\Work\birds.png"
-PATH = r"C:\Users\Konstantin\Documents\Work\birds"
+ICON_PATH = "birds.png"
+PATH = "birds"
 
 
 def generate_icon(filename):
@@ -60,5 +60,5 @@ def generate_icon(filename):
 
 # Run the traaaap
 for i in range(0, NUMICONS):
-    generate_icon("\icon" + str(i + 1) + ".png")
+    generate_icon("/icon" + str(i + 1) + ".png")
 
