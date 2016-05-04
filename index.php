@@ -3,7 +3,6 @@
     include('lib/header.php');
 ?>
 <body>
-    <div id="background"></div>    
     <div id="origin" class="text-muted"><span class="glyphicon glyphicon-info-sign"></span></div>
     <div id="thing-script">
     <script>
