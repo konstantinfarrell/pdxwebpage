@@ -1,9 +1,9 @@
 $('head').append("<link rel='stylesheet' type='text/css' href='rain/rain.css' />");
 $(document).ready(function(){
     var size = 10;
-    var timeout = 15;
+    var timeout = 16;
     var num = 6;
-    var max_speed = 4;
+    var max_speed = 3;
     var max_lines = Math.round(Math.random()*4)+3;
     var start_y = -1 * num * size;    
     
@@ -26,7 +26,7 @@ $(document).ready(function(){
 	}
 	setTimeout(function(){
 	    drip(cell, x, speed);
-	}, 17);
+	}, timeout);
     }
 
     for(i = 0; i < max_lines; i++){
