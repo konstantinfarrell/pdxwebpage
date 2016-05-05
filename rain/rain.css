@@ -18,3 +18,8 @@
     background-image: url('cube-drip.png');
     opacity: 0.6;
 }
+
+@keyframes drip {
+    from { top: -200px; }
+    to { top: 100%; }
+}

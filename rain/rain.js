@@ -2,10 +2,10 @@ $('head').append("<link rel='stylesheet' type='text/css' href='rain/rain.css' />
 $(document).ready(function(){
     var size = 10;
     var timeout = 16;
-    var num = 6;
-    var max_speed = 3;
-    var max_lines = Math.round(Math.random()*4)+3;
-    var start_y = -1 * num * size;    
+    var height = 6;
+    var max_speed = 4;
+    var max_lines = Math.round(($(window).width()/200)*2);
+    var start_y = -1 * height * size;    
     
     $('body').append('<div id="background"></div>');
     $('#background').css('top', 0);
@@ -16,8 +16,9 @@ $(document).ready(function(){
 	var tops = $("#"+cell).position().top + speed;
 	$("#"+cell).css('top', tops);
 	if($("#"+cell).position().top > $(window).height()){
-	    var next_x = Math.round(Math.random()*($(window).width()/size))*size;
-	    var opacity = Math.random() * (0.75) + 0.15;
+	    var next_x = (Math.round(Math.random()*($(window).width()/size))-1)*size;
+	    var opacity = Math.random() * (0.50) + 0.2;
+	    
 	    $("#"+cell).css('opacity', opacity);
 	    $("#"+cell).css('left', next_x);
 	    $("#"+cell).css('top', start_y);
@@ -36,7 +37,7 @@ $(document).ready(function(){
         var cell_html = '<div id="'+cell_name+'" class="cell"></div>';
         $('#cell-container').append(cell_html);
         $("#"+cell_name).css('left', next_x);
-        $("#"+cell_name).css({'width': size, 'height': num * size });
+        $("#"+cell_name).css({'width': size, 'height': height * size });
         $("#"+cell_name).css('top', start_y - next_x);
         drip(cell_name, next_x, speed);
     }    
