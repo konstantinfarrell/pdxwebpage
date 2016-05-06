@@ -31,7 +31,7 @@ $(document).ready(function(){
     var g = randColor();
     var b = randColor();
 
-    var delay = 80;
+    var delay = 100;
 
     function gradiate(r,g,b){
 	var color = getColor(amount(r), amount(g), amount(b));

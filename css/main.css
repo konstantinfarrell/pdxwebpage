@@ -1,16 +1,21 @@
-#activator:hover {
-    cursor:pointer;
-}
-
 body {
     height: 100%;
     overflow-x: hidden;
 }
 
+body:-webkit-full-screen{width: 100%;}
+body:-moz-full-screen{width: 100%;}
+body:-ms-full-screen{width: 100%;}
+body:-o-full-screen{width: 100%;}
+body:full-screen{width: 100%;}
 
 #code {
     width: 550px;
     margin: 0 auto;
+}
+
+#fullscreen:hover {
+    cursor:pointer;
 }
 
 #main-container {
@@ -32,4 +37,8 @@ body {
 .push {
     height: 33%;
     width: 100%;
+}
+
+#visibility:hover {
+    cursor:pointer;
 }

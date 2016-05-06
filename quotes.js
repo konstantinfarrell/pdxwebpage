@@ -10,6 +10,7 @@ $(document).ready(function(){
 	"Well this is a strange mix of pointless and interesting.",
 	"Ooooo! Colors!",
 	"I like it.",
+	"It's like The Matrix...during Easter.",
 	"What? The words change? Nice.",
     ];
     var numquotes = quotes.length;
@@ -39,15 +40,17 @@ $(document).ready(function(){
     newQuote();
 
     var visible = true;
-    $('#activator').click(function(){
+    $('#visibility').click(function(){
 	if(visible){
+	    $('#visibility').attr('title', 'Show Text');
+	    $('#visibility').toggleClass("glyphicon-eye-close").toggleClass("glyphicon-eye-open");
 	    $('#contents').hide(1200).promise().done(function(){
-	        $('.push').animate({'height': '5%'});
-	        $('#activator').html("<div class='text-center'><span class='glyphicon glyphicon-eye-open' title='show'></span></div>");
+	        $('.push').animate({'height': '1%'});
 	        visible = false;
 	    });
 	} else {
-	    $('#activator').html("<div class='text-center'><span class='glyphicon glyphicon-eye-close' title='hide'></span></div>");
+	    $('#visibility').toggleClass("glyphicon-eye-close").toggleClass("glyphicon-eye-open");
+	    $('#visibility').attr('title', 'Hide Text');
 	    $('.push').animate({'height': '33%'}).promise().done(function(){
 	        $('#contents').show(600);
 	        visible = true;
